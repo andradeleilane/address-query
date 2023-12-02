@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600&family=Red+Hat+Text&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.min.css">
+    <title>JavaScript exercise - consuming API</title>
+</head>
+<body>
+
+    <section class="s-main">
+        <div class="content">
+            <div class="image">
+                <img src="/images/logo.svg" alt="Logo">
+            </div>
+            <div class="card-search">
+                <div class="title">
+                    <h1>Encontre seu endereço!</h1>
+                    <p>Digite o CEP abaixo, sem pontos e traços, apenas o número. Em seguida, clique no botão "Buscar". 
+                        Pronto! Os dados do endereço serão exibidos abaixo.
+                    </p>
+                </div>
+                <div class="input-search">
+                    <input type="text" id="js-input-cep" placeholder="Digite o CEP">
+                    <button id="js-btn-buscar-cep">Buscar</button>
+                </div>
+                <p class="help-text-error" id="js-error">Preencha o campo, por favor.</p>
+            </div>
+            <div class="card-result" id="js-dados">
+                <div class="text">
+                    <h2>Aqui está o endereço completo</h2>
+                    <ul>
+                        <li>
+                            <strong>Logradouro</strong> 
+                            <input type="text" id="js-result-logradouro" readonly>
+                        </li>
+                        <li>
+                            <strong>Complemento</strong> 
+                            <input type="text" id="js-result-complemento" readonly>
+                        </li>
+                        <li>
+                            <strong>Bairro</strong> 
+                            <input type="text" id="js-result-bairro" readonly>
+                        </li>
+                        <li>
+                            <strong>Cidade</strong> 
+                            <input type="text" id="js-result-localidade" readonly>
+                        </li>
+                        <li>
+                            <strong>UF</strong> 
+                            <input type="text" id="js-result-uf" readonly>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
